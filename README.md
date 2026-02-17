@@ -1,65 +1,59 @@
-# Subscription Manager (React + Vite + Tailwind)
-
-Gerenciador de assinaturas PWA: CRUD local (localStorage), dashboard com gráficos (Chart.js), alertas de cobrança (Notification API) e modo escuro. Pronto para deploy na Netlify.
-
-## Stack
-- React 19 + TypeScript + Vite
-- Tailwind CSS 3, lucide-react para ícones
-- Chart.js + react-chartjs-2
-- date-fns para datas
-- Armazenamento: localStorage (sem backend)
-
-## Como rodar
+# Português
+## Descrição
+Gerenciador de assinaturas desenvolvido em TypeScript. Este projeto tem como objetivo facilitar o controle, monitoramento e automação de assinaturas digitais em diferentes plataformas.
+## Instalação
+1. Certifique-se de ter o Node.js instalado.
+2. Clone o repositório:
+   ```bash
+   git clone https://github.com/ens-Emilio/subscription-manager.git
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+## Uso
+Execute o projeto:
 ```bash
-pnpm install
-pnpm dev
+npm start
 ```
-App em http://localhost:5173.
-
-Build/preview de produção:
+Adapte para suas necessidades conforme a documentação interna.
+---
+# English
+## Description
+Subscription manager developed in TypeScript. This project aims to facilitate the control, monitoring, and automation of digital subscriptions across various platforms.
+## Installation
+1. Make sure you have Node.js installed.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/ens-Emilio/subscription-manager.git
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+## Usage
+Run the project:
 ```bash
-pnpm build
-pnpm preview
+npm start
 ```
-
-## Scripts
-- `pnpm dev` – modo desenvolvimento
-- `pnpm build` – build produção (tsc + vite build)
-- `pnpm preview` – serve build
-- `pnpm lint` – lint
-
-## Estrutura
+Adapt to your needs according to the internal documentation.
+---
+# Español
+## Descripción
+Gestor de suscripciones desarrollado en TypeScript. Este proyecto tiene como objetivo facilitar el control, monitoreo y automatización de suscripciones digitales en diferentes plataformas.
+## Instalación
+1. Asegúrate de tener Node.js instalado.
+2. Clona el repositorio:
+   ```bash
+   git clone https://github.com/ens-Emilio/subscription-manager.git
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+## Uso
+Ejecuta el proyecto:
+```bash
+npm start
 ```
-src/
-  App.tsx               # UI principal, dashboard, filtros, modal
-  main.tsx              # bootstrap e registro do service worker
-  index.css             # Tailwind base
-  hooks/useSubscriptions.ts
-  utils/subscriptions.ts  # CRUD localStorage, totais, alertas
-  utils/csv.ts            # export CSV
-public/
-  sw.js                 # service worker básico
-  manifest.webmanifest  # PWA
-```
-
-## Armazenamento e alertas
-- `localStorage` chave `subscriptions`.
-- `checkAlerts` dispara Notification API para cobranças nos próximos 7 dias (permite ícone `/icon.png` se adicionado em `public`).
-
-## Deploy na Netlify
-- Arquivo `netlify.toml` já define `build = "pnpm build"` e `publish = "dist"`.
-- Passos CLI:
-  ```bash
-  npm i -g netlify-cli   # se precisar
-  netlify login
-  netlify init           # ou netlify link se já houver site
-  netlify deploy --prod
-  ```
-
-## PWA
-- `manifest.webmanifest` configurado (tema roxo).
-- `public/sw.js` registra skipWaiting/claim.
-- Registro do SW em `main.tsx` (após load).
-
-## Licença
-MIT © 2026 ens-Emilio
+Adáptalo a tus necesidades según la documentación interna.
